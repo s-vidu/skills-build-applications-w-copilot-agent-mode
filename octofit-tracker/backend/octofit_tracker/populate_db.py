@@ -24,7 +24,10 @@ db.users.insert_many([
     {"email": "jane@example.com", "name": "Jane", "password": "janepass"},
     {"email": "lisa@example.com", "name": "Lisa", "password": "lisapass"},
     {"email": "mike@example.com", "name": "Mike", "password": "mikepass"},
-    {"email": "nina@example.com", "name": "Nina", "password": "ninapass"}
+    {"email": "nina@example.com", "name": "Nina", "password": "ninapass"},
+    {"email": "oliver@example.com", "name": "Oliver", "password": "oliverpass"},
+    {"email": "paula@example.com", "name": "Paula", "password": "paulapass"},
+    {"email": "quentin@example.com", "name": "Quentin", "password": "quentinpass"}
 ])
 
 # Teams
@@ -37,7 +40,9 @@ db.teams.insert_many([
     {"name": "Team Zeta", "members": ["ian@example.com", "jane@example.com"]},
     {"name": "Team Eta", "members": ["kyle@example.com"]},
     {"name": "Team Theta", "members": ["lisa@example.com", "mike@example.com"]},
-    {"name": "Team Iota", "members": ["nina@example.com"]}
+    {"name": "Team Iota", "members": ["nina@example.com"]},
+    {"name": "Team Kappa", "members": ["oliver@example.com", "paula@example.com"]},
+    {"name": "Team Lambda", "members": ["quentin@example.com"]}
 ])
 
 # Workouts
@@ -51,7 +56,9 @@ db.workouts.insert_many([
     {"name": "Squats", "description": "Do 25 squats"},
     {"name": "Lunges", "description": "Do 20 lunges"},
     {"name": "Mountain Climbers", "description": "Do 30 mountain climbers"},
-    {"name": "High Knees", "description": "Do high knees for 1 minute"}
+    {"name": "High Knees", "description": "Do high knees for 1 minute"},
+    {"name": "Pushups Advanced", "description": "Do 50 pushups"},
+    {"name": "Sprint", "description": "Sprint for 2 minutes"}
 ])
 
 # Activities
@@ -69,7 +76,10 @@ db.activity.insert_many([
     {"user": "kyle@example.com", "activity_type": "run", "duration": 50},
     {"user": "lisa@example.com", "activity_type": "mountain climbers", "duration": 30},
     {"user": "mike@example.com", "activity_type": "high knees", "duration": 60},
-    {"user": "nina@example.com", "activity_type": "run", "duration": 55}
+    {"user": "nina@example.com", "activity_type": "run", "duration": 55},
+    {"user": "oliver@example.com", "activity_type": "pushups advanced", "duration": 50},
+    {"user": "paula@example.com", "activity_type": "sprint", "duration": 2},
+    {"user": "quentin@example.com", "activity_type": "run", "duration": 60}
 ])
 
 # Leaderboard
@@ -82,7 +92,9 @@ db.leaderboard.insert_many([
     {"team": "Team Zeta", "points": 70},
     {"team": "Team Eta", "points": 40},
     {"team": "Team Theta", "points": 80},
-    {"team": "Team Iota", "points": 45}
+    {"team": "Team Iota", "points": 45},
+    {"team": "Team Kappa", "points": 90},
+    {"team": "Team Lambda", "points": 50}
 ])
 
 print("Test data populated successfully.")
